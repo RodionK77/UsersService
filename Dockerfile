@@ -7,4 +7,4 @@ RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 COPY Users /code/
 
-CMD ["python", "UsersService.py"]
+CMD ["uvicorn", "UsersService:app", "--host", "0.0.0.0", "--port", "8000"]
