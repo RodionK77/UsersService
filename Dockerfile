@@ -7,6 +7,6 @@ RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 COPY Users /code/
 
-EXPOSE 8000
+EXPOSE 80
 
 CMD ["uvicorn", "UsersService:app", "--host", "0.0.0.0", "--port", "8000"]
