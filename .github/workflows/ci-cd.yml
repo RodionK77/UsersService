@@ -40,4 +40,3 @@ jobs:
           folder-id: ${{ secrets.YC_FOLDER_ID }}
           revision-image-url: cr.yandex/${{ secrets.YC_REGISTRY_ID }}/users-service:latest
           revision-service-account-id: ${{ secrets.YC_SA_ID }}
-          revision-env: POSTGRES_URL=${{ secrets.POSTGRES_URL }}
