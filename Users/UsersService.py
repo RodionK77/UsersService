@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, jsonify, request
 from fastapi import FastAPI
 from flask_sqlalchemy import SQLAlchemy
@@ -34,7 +36,5 @@ def get_cancel_users():
     #return jsonify(user_list)
     return jsonify("Cancel users: id-4:User4; id-5:User5; id-6:User6")
 
-# if __name__ == '__main__':
-#     #with app.app_context():
-#         #db.create_all()
-#     app.run(debug=True, host='0.0.0.0', port=5016)
+if __name__ == '__main__':
+    app.run(app, host='0.0.0.0', port=int(os.getenv('PORT', 80)))
