@@ -16,15 +16,6 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = FastAPI()
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=['*'],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
-
 @app.get('/')
 def get_users():
     #users = User.query.all()
