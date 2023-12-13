@@ -21,7 +21,7 @@ def get_users():
     #users = User.query.all()
     #user_list = [{'id': user.id, 'name': user.name} for user in users]
     #return jsonify(user_list)
-    return jsonify("Allow users: id-1:User1; id-2:User2; id-3:User3")
+    return "Allow users: id-1:User1; id-2:User2; id-3:User3"
 
 # @app.route('/add_user', methods=['POST'])
 # def create_user():
@@ -36,7 +36,7 @@ def get_cancel_users():
     #users = User.query.all()
     #user_list = [{'id': user.id, 'name': user.name} for user in users]
     #return jsonify(user_list)
-    return jsonify("Cancel users: id-4:User4; id-5:User5; id-6:User6")
+    return "Cancel users: id-4:User4; id-5:User5; id-6:User6"
 
 if __name__ == '__main__':
     uvicorn.run(app, host='0.0.0.0', port=int(os.getenv('PORT', 80)))
