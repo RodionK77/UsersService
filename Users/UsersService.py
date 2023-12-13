@@ -2,6 +2,7 @@ import os
 
 from flask import Flask, jsonify, request
 from fastapi import FastAPI
+import uvicorn
 from flask_sqlalchemy import SQLAlchemy
 
 #app = Flask(__name__)
@@ -37,4 +38,4 @@ def get_cancel_users():
     return jsonify("Cancel users: id-4:User4; id-5:User5; id-6:User6")
 
 if __name__ == '__main__':
-    app.run(app, host='0.0.0.0', port=int(os.getenv('PORT', 80)))
+    uvicorn.run(app, host='0.0.0.0', port=int(os.getenv('PORT', 80)))
