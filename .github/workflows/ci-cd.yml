@@ -22,7 +22,7 @@ jobs:
           sleep 5
       - name: Run tests
         run: |
-          pytest component_tests.py
+          pytest Users/component_tests.py
 
   build:
 
